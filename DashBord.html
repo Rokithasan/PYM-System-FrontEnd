@@ -67,22 +67,33 @@
 
                 <div class="row">
 
-			<div id="mySidenav" class="sidenav">
-
-				<a href="#" class="icon-a"></i> Dashboard</a>
-
-				<button class="dropdown-btn"> Contents <i class="fa fa-caret-down"></i> </button>
-				<button class="dropdown-btn"> Courses <i class="fa fa-caret-down"></i> </button>
-				<button class="dropdown-btn"> Students <i class="fa fa-caret-down"></i> </button>
-				<button class="dropdown-btn"> Staff <i class="fa fa-caret-down"></i> </button>
-
-				  <div class="dropdown-container">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
-				  </div>
-		  
-			  </div>
+                    <div class="sidenav">
+                        <a href="#about">Dashboard</a>
+                        <button class="dropdown-btn">Contents<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        <button class="dropdown-btn">Courses<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        <button class="dropdown-btn">Students<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        <button class="dropdown-btn">Staff<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                      </div>
 
               <div id="card-container">
 
@@ -113,6 +124,10 @@
                 <br/><br/>
                     
                 <div class="clearfix"></div>
+
+               <div class="p">
+                <p>Note: Showing only active students and staff only </p>
+               </div>
                 
             </div>
 
@@ -126,7 +141,24 @@
             </footer>
 
     </div>
-    
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+    </script>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
