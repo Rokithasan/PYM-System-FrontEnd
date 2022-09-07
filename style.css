@@ -11,11 +11,12 @@ body{
   .navbar{
     background-color:white;
     padding: 20px;
+    margin-right: -80px;
   }
 
   .navbar-brand{
     background-color: white;
-    padding: 40px;
+    padding: 0px;
   }
 
   .navbar-nav{
@@ -180,7 +181,8 @@ body{
     width: 600px;
     height: 100%;
     margin-left: 200px;
-  }
-  
 
+  }
+
+  
  }
